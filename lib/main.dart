@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'new app',
-      home: Scaffold(backgroundColor: Colors.white),
-      routes: {"/": (context) => HomePage()},
+      home: HomePage(), // <-- This is enough!
+      // routes: {"/": (context) => HomePage()}, // <-- REMOVE THIS LINE
     );
   }
 }
