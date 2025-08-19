@@ -77,11 +77,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        height:
-                            100, // Set a fixed height for the CategoriesWidget
-                        child: CategoriesWidget(),
-                      ),
+                      SizedBox(child: CategoriesWidget()),
                     ],
                   ),
                 ),
