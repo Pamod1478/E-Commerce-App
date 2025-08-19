@@ -1,5 +1,6 @@
 import 'package:e_commerce_app/widgets/CategoriesWidget.dart';
 import 'package:e_commerce_app/widgets/HomeAppBar.dart';
+import 'package:e_commerce_app/widgets/itemsWidget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -63,7 +64,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.only(top: 10, bottom: 10),
                         child: Container(
                           alignment: Alignment.centerLeft,
                           margin: EdgeInsets.symmetric(horizontal: 10),
@@ -77,7 +78,28 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
+
+                      // categories widget
                       SizedBox(child: CategoriesWidget()),
+
+                      //Items
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Container(
+                          alignment: Alignment.centerLeft,
+                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          child: Text(
+                            "Best Selling",
+                            style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0XFF4C53A5),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      ItemsWidget(),
                     ],
                   ),
                 ),
