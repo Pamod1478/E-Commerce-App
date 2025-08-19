@@ -27,7 +27,7 @@ class HomeAppBar extends StatelessWidget {
           ),
           Spacer(),
           Badge(
-            padding: EdgeInsets.all(5),
+            padding: EdgeInsets.all(3),
             label: Text("3", style: TextStyle(color: Colors.white)),
             child: InkWell(
               onTap: () {},
