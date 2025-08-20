@@ -2,6 +2,7 @@ import 'package:e_commerce_app/widgets/CategoriesWidget.dart';
 import 'package:e_commerce_app/widgets/HomeAppBar.dart';
 import 'package:e_commerce_app/widgets/itemsWidget.dart';
 import 'package:flutter/material.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -107,6 +108,17 @@ class HomePage extends StatelessWidget {
               // Wrap CategoriesWidget with a SizedBox to constrain its height
             ],
           ),
+        ),
+        bottomNavigationBar: CurvedNavigationBar(
+          color: Color(0XFF4C53A5),
+          height: 70,
+          backgroundColor: Colors.white,
+          onTap: (index) {},
+          items: [
+            Icon(Icons.home, size: 30, color: Colors.white),
+            Icon(Icons.shopping_cart_checkout, size: 30, color: Colors.white),
+            Icon(Icons.list, size: 30, color: Colors.white),
+          ],
         ),
       ),
     );
