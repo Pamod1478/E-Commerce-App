@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/pages/CartPage.dart';
 import 'package:e_commerce_app/pages/homepage.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'new app',
-      home: HomePage(), // <-- This is enough!
+      // home: HomePage(),
+      routes: {
+        "/": (context) => HomePage(),
+        "cartPage": (context) => CartPage(),
+      },
+
+      // <-- This is enough!
       // routes: {"/": (context) => HomePage()}, // <-- REMOVE THIS LINE
     );
   }
