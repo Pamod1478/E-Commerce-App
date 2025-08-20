@@ -20,7 +20,6 @@ class HomePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                  height: 500,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Color(0xFFEDECF2),
