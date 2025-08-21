@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CartItamSamples extends StatelessWidget {
@@ -5,8 +6,11 @@ class CartItamSamples extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Column(
+      
       children: [
+        for(int i=3; i<6; i++ )
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Container(
@@ -29,7 +33,7 @@ class CartItamSamples extends StatelessWidget {
                     Container(
                       height: 110,
                       width: 70,
-                      child: Image.asset("images/1.png"),
+                      child: Image.asset("images/$i.png"),
                     ),
                   ],
                 ),
@@ -57,7 +61,73 @@ class CartItamSamples extends StatelessWidget {
                       color: Color(0XFF4C53A5),
                     ),
                   ),
-                  
+                ),
+
+                Positioned(
+                  top: 10,
+                  right: 20,
+                  child: Column(
+                  children: [
+                    Icon(Icons.delete,color: Colors.red,),
+                  ],
+                ),),
+                Positioned(
+                  top: 70,
+                  right: 10,
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 27,
+                        width: 27,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Color(0xFFEDECF2),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.shade400,
+                              blurRadius: 10,
+                            ),
+                          ]
+                        ),
+                        
+                       child: Icon(CupertinoIcons.plus),
+                      ),
+
+                      SizedBox(
+                        width: 17,
+                      ),
+                      Container(
+                        child: Text("01",style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17,
+                          color: Color(0XFF4C53A5),
+                        ),),
+                      ),
+
+                      SizedBox(
+                        width: 17,
+                      ),
+                      Container(
+                        height: 27,
+                        width: 27,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Color(0xFFEDECF2),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.shade400,
+                              blurRadius: 10,
+                            ),
+                          ]
+                        ),
+                        
+                       child: Icon(CupertinoIcons.minus),
+                      ),
+
+                      
+                      
+                    ],
+                  ),
                 ),
               ],
             ),
